@@ -1,6 +1,9 @@
 package application;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
 import chess.ChessPiece;
+import chess.ChessPosition;
 import chess.Color;
 
 public class UI
@@ -23,6 +26,21 @@ public class UI
   public static final String ANSI_PURPLE_BACKGROUND = "\u001B[45m";
   public static final String ANSI_CYAN_BACKGROUND = "\u001B[46m";
   public static final String ANSI_WHITE_BACKGROUND = "\u001B[47m";
+
+  public static ChessPosition readChessPosition (Scanner sc)
+  {
+    try
+    {
+      String colInput = sc.nextLine ();
+      char column = colInput.charAt (0);
+      int row = Integer.parseInt (colInput.substring (1));
+      return new ChessPosition (column, row);
+    }
+    catch (RuntimeException e)
+    {
+      throw new InputMismatchException ("Position value out of range: Min.: a1; max.: h8.");
+    }
+  }
 
   public static void printBoard (ChessPiece [][] pieces)
   {
