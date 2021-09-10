@@ -16,4 +16,10 @@ public class Horse extends ChessPiece
   {
     return "H";
   }
+  
+  @Override
+  public boolean[][] possibleMoves ()
+  {
+    return null;
+  }
 }

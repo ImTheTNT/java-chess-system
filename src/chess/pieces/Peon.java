@@ -16,4 +16,10 @@ public class Peon extends ChessPiece
   {
     return "P";
   }
+
+  @Override
+  public boolean[][] possibleMoves ()
+  {
+    return null;
+  }
 }
