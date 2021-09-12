@@ -21,7 +21,7 @@ public class Rook extends ChessPiece
   @Override
   public boolean[][] possibleMoves ()
   {
-    boolean[][] matrix = new boolean [getBoard ().getRows ()] [getBoard ().getColumns ()];
+    boolean [][] matrix = new boolean [getBoard ().getRows ()] [getBoard ().getColumns ()];
     Position pos = new Position (0, 0);
 
     // up
