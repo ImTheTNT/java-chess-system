@@ -228,8 +228,8 @@ public class ChessMatch
     // placeNewPiece('g', 8, new Knight (board, Color.BLACK));
 
     // placeNewPiece('c', 1, new Bishop (board, Color.WHITE));
-    // placeNewPiece('f', 1, new Bishop (board, Color.WHITE));
-    // placeNewPiece('c', 8, new Bishop (board, Color.BLACK));
+    placeNewPiece('f', 1, new Bishop (board, Color.WHITE));
+    placeNewPiece('c', 8, new Bishop (board, Color.BLACK));
     // placeNewPiece('f', 8, new Bishop (board, Color.BLACK));
 
     // placeNewPiece ('d', 1, new Queen (board, Color.WHITE));
