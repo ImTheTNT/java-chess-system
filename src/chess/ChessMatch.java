@@ -184,9 +184,9 @@ public class ChessMatch
   {
     if (testCheck (color))
     {
-      List <Piece> list = piecesOnBoard.stream ().filter (x -> ((ChessPiece) x).getColor () == color).collect (Collectors.toList ());
+      List <Piece> pieces = piecesOnBoard.stream ().filter (x -> ((ChessPiece) x).getColor () == color).collect (Collectors.toList ());
 
-      for (Piece p : list)
+      for (Piece p : pieces)
       {
         boolean [][] matrix = p.possibleMoves ();
         for (int i = 0; i < board.getRows (); i++)
