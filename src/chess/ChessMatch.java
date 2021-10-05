@@ -119,9 +119,9 @@ public class ChessMatch
 
     if (capturedPiece != null)
     {
-      board.placePiece(capturedPiece, target);
+      board.placePiece (capturedPiece, target);
       capturedPieces.remove (capturedPiece);
-      piecesOnBoard.add (p);
+      piecesOnBoard.add (capturedPiece);
     }
   }
 
