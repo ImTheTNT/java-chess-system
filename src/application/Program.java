@@ -38,6 +38,14 @@ public class Program
         ChessPiece capturedPiece = match.performChessMove (source, target);
         if (capturedPiece != null)
           captured.add (capturedPiece);
+
+        // promotion
+        if (match.getPromoted () != null)
+        {
+          System.out.print ("Enter piece for promotion (Q/R/K/B): ");
+          String type = sc.nextLine ();
+          match.replacePromotedPiece (type.toUpperCase ());
+        }
       }
       catch (ChessException e)
       {
